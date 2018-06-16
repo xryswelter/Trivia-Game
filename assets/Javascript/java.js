@@ -54,15 +54,16 @@ $(document).ready(function () {
         }
 
         // Updating results
-        $('.results').html('You got ' + win + ' answers of 3 questions correct');
-        $('.wins').html('Wins: ' + win);
-        $('.loss').html('Losses: ' + loss);
-        $('.notClicked').html('Not Clicked: ' + notClicked);
+        $('.result').text('You got ' + win + ' answers of 3 questions correct');
+        $('.wins').text('Wins: ' + win);
+        $('.loss').text('Losses: ' + loss);
+        $('.notClicked').text('Not Clicked: ' + notClicked);
         //Functions to show results
         discapear();
     }
 
     function discapear() {
+        console.log('stop')
         //switch quiz from showing to invisible
         let disappear = $('.quiz');
         disappear.css('display', 'none');
@@ -74,19 +75,25 @@ $(document).ready(function () {
         //switch result from invisible to showing
         let appear = $('.results');
         appear.css('display', 'block');
-        clearInterval(timing);
+        clearInterval(timer);
     }
     // document.getElementById('timer').innerHTML(0 + ':' + 10)
     //Time Function
-    let time = 10;
+    let time = 11;
     let timing = function () {
         console.log("foo");
         
         time--;
         $('#timer').html('Time remaining is: ' + time);
         console.log(time);
-        if (t === 0) {
+        if (time ===0) {
+            resultArray.push(answer1, answer2, answer3);
+            //doublecheck ^_^    
+            console.log(resultArray);
+            console.log('time is zero')
             endGame();
+            clearInterval(timer);
+            return;
         }
     }
     let timer = setInterval(timing, 1000);

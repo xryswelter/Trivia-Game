@@ -1,0 +1,45 @@
+body{
+    background-image:url("../Images/bkg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:800px;
+}
+.hero{
+    font-size: 36px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color:white;
+    text-shadow: 5px 5px darkslategray;
+}
+#timer{
+    border: 2px solid black;
+    background: silver;
+    margin: auto;
+    max-width: 400px;
+    text-align: center;
+    font-size: 24px
+}
+.quiz{
+    background:white;
+    font-size: 30px;
+    padding: 10px;
+    text-align:center;
+    margin:0px 50px 0px 50px;
+
+}
+.results{
+    background: white;
+    padding: 20px;
+    text-align:center;
+    justify-content: center;
+    margin:0px 50px 0px 50px;
+}
+.result{
+    font-size:42px;
+}
+.wins,.loss,.notClicked{
+    font-size:30px;
+    margin:10px;
+    padding:10px;
+}
