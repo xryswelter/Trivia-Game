@@ -7,7 +7,6 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/CSS/style.css" />
-    <script src="assets/Javascript/java.js"></script>
 </head>
 
 <body>
@@ -16,7 +15,8 @@
             <h1>Welcome to the Trivia Game!</h1>
         </div>
     </div>
-    <div class="container quiz">
+    <div id="timer">Time</div>
+    <div class="container quiz" data="show">
         <div class="row">
             <div class="question">What is the short hand command to send a committed file to a github repository?</div>
             <button class="answer1">A: git pull</button>
@@ -40,12 +40,14 @@
         </div>
         <button class="finale">Finished</button>
     </div>
-    <div class="contaier results">
+    <div class="contaier results" data="hide">
         <h2 class="result">Results</h2>
         <div class="wins">Wins</div>
         <div class="loss">Loss</div>
         <div class="notClicked">NotClicked</div>
     </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="assets/Javascript/java.js"></script>
 </body>
 
 </html>
